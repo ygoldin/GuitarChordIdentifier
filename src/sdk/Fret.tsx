@@ -23,4 +23,4 @@ export class Fret {
     isEmpty(): boolean {
         return this.heldStrings.length === 0;
     }
-};
+}

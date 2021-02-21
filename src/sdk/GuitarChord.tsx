@@ -41,4 +41,4 @@ export class GuitarChord {
         
         return result;
     }
-};
+}
