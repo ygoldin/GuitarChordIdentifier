@@ -11,7 +11,7 @@ export enum GuitarString {
     lowE
 }
 
-export const allGuitarStrings = () => [GuitarString.highE, GuitarString.B, GuitarString.G, GuitarString.D, GuitarString.A, GuitarString.lowE];
+export const allGuitarStrings = (): GuitarString[] => [GuitarString.highE, GuitarString.B, GuitarString.G, GuitarString.D, GuitarString.A, GuitarString.lowE];
 
 export const checkStringOrder = (guitarStrings: GuitarString[]): void => {
     for (let i = 0; i < guitarStrings.length - 1; i++) {
