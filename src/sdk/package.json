@@ -5,7 +5,7 @@
   "main": "index.ts",
   "scripts": {
     "test": "npm i jest",
-    "lint": "npx eslint ."
+    "lint": "eslint -c eslintrc.js --ext .ts,.tsx src"
   },
   "repository": {
     "type": "git",
