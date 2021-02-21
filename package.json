@@ -1,5 +1,5 @@
 {
-  "name": "guitar-chords-sdk",
+  "name": "guitar-chords-identifier",
   "version": "0.0.1",
   "description": "tools for identifying guitar chords and how they're played",
   "main": "index.ts",
