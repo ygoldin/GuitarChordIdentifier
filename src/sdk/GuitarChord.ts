@@ -1,7 +1,7 @@
 // Created by Yael Goldin
 
 import { Fret } from "./Fret";
-import { GuitarString, checkStringOrder } from "./GuitarString";
+import { GuitarString, checkStringOrder, NUM_STRINGS } from "./GuitarString";
 
 export class GuitarChord {
     public readonly name: string;
@@ -9,6 +9,13 @@ export class GuitarChord {
     public readonly unplayedStrings: GuitarString[];
 
     constructor(name: string, frets: Fret[], unplayedStrings: GuitarString[]) {
+        if(!name) {
+            throw new Error('the guitar chord needs a name');
+        } else if (frets.length === 0) {
+            throw new Error('at least one string has to be held');
+        } else if (unplayedStrings.length === NUM_STRINGS) {
+            throw new Error('at leas one string has to be played');
+        }
         for (let i = 0; i < frets.length - 1; i++) {
             if (frets[i].fretNumber >= frets[i+1].fretNumber) {
                 throw new Error('frets must be provided in increasing order');
