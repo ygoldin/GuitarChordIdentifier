@@ -5,7 +5,9 @@
   "main": "index.ts",
   "scripts": {
     "test": "jest --config jest.config.js",
-    "lint": "eslint -c .eslintrc.js --ext .ts,.tsx src"
+    "lint": "eslint -c .eslintrc.js --ext .ts,.tsx src",
+    "build": "tsc src/sdk/index.ts --outDir dist",
+    "main": "npm run build && node dist/index.js"
   },
   "repository": {
     "type": "git",
