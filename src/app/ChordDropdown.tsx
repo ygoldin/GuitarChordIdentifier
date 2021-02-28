@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+import ReactDOM from 'react-dom';
 import { Dropdown } from 'reactjs-dropdown-component';
 import {getChordNames, getChordInfo} from '../sdk';
 
@@ -20,3 +21,6 @@ export const ChordDropdown: FC = () => {
         onChange={onChange}
     />;
 }
+
+const domContainer = document.querySelector('#chord_dropdown');
+ReactDOM.render(ChordDropdown, domContainer);
